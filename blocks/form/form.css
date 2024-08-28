@@ -1,0 +1,90 @@
+/* General Form Styles */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.field-wrapper {
+  margin-bottom: 1em;
+}
+
+.required {
+  color: red;
+}
+
+/* Heading Styles */
+h3, p {
+  margin: 0;
+  padding-bottom: 0.5em;
+}
+
+/* Label Styles */
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+label.required::after {
+  content: ' *';
+  color: red;
+}
+
+/* Input and Textarea Styles */
+input[type="text"], 
+input[type="email"], 
+input[type="your experience"],
+textarea {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="your experience"]:focus,
+textarea:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+/* Select Styles */
+select {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+select:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+/* Button Styles */
+button {
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004494;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

@@ -1,0 +1,62 @@
+.table {
+    width: 100%;
+    margin: 5px 0;
+    overflow-x: auto;
+}
+
+.table table {
+    width: 80%;
+    max-width: 100%;
+    border-collapse: collapse; /* Ensures borders between cells are combined */
+    font-size: var(--body-font-size-xs);
+
+}
+
+@media (min-width: 600px) {
+    .table table {
+        font-size: var(--body-font-size-s);
+    }
+}
+
+@media (min-width: 900px) {
+    .table table {
+        font-size: var(--body-font-size-m);
+    }
+}
+
+.table table thead tr {
+    border-top: 2px solid #dadada; /* Border at the top of the header */
+    border-bottom: 2px solid #dadada; /* Border at the bottom of the header */
+}
+
+.table table tbody tr {
+    border-bottom: 1px solid #dadada; /* Border between rows in the body */
+}
+
+.table table th,
+.table table td {
+    padding: 0.5em;
+    text-align: center;
+    border: 2px solid #dadada; /* Border for each cell */
+    border-color: rgb(71, 65, 161);
+}
+
+.table table th {
+    font-weight: 700;
+}
+
+.pagination-controls button {
+    background-color: #3b57f4;
+    color: #f2ebeb;
+    border: none;
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 16px; 
+}
+
+.pagination-controls button:disabled {
+    background-color: #a0b4ee; 
+    cursor: not-allowed;
+}
