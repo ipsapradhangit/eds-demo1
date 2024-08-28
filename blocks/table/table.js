@@ -33,6 +33,8 @@ async function createTableHeader(table) {
   tr.append(continentHeader);
 
   table.appendChild(tr);
+
+  return table;
 }
 
 // Create a table row
