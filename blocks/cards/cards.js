@@ -2,8 +2,8 @@ import { createOptimizedPicture, fetchPlaceholders } from '../../scripts/aem.js'
 
 export default async function decorate(block) {
   const placeholders = await fetchPlaceholders('');
-  console.log(placeholders);  // Debugging: Check the content of placeholders
-  const clickHereForMore = placeholders?.clickHereForMore || 'Click Here For More';  // Fallback text
+  console.log(placeholders); // Debugging: Check the content of placeholders
+  const clickHereForMore = placeholders?.clickHereForMore || 'Click Here For More'; // Fallback text
 
   // Change to ul, li
   const ul = document.createElement('ul');

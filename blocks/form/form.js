@@ -1,4 +1,3 @@
-
 function createSelect(fd) {
   const select = document.createElement('select');
   select.id = fd.Field;
@@ -9,7 +8,7 @@ function createSelect(fd) {
     placeholderOption.setAttribute('disabled', '');
     select.append(placeholderOption);
   }
-  fd.Options.split(',').forEach(optionText => {
+  fd.Options.split(',').forEach((optionText) => {
     const option = document.createElement('option');
     option.textContent = optionText.trim();
     option.value = optionText.trim();
@@ -65,7 +64,7 @@ function createButton(fd) {
 
 function constructPayload(form) {
   const payload = {};
-  [...form.elements].forEach(fe => {
+  [...form.elements].forEach((fe) => {
     if (fe.type === 'checkbox') {
       if (fe.checked) payload[fe.id] = fe.value;
     } else if (fe.id) {
@@ -100,7 +99,7 @@ export async function createForm(formURL) {
   const form = document.createElement('form');
   form.dataset.action = formURL.split('.json')[0];
 
-  json.data.forEach(fd => {
+  json.data.forEach((fd) => {
     fd.Type = fd.Type || 'text';
     const fieldWrapper = document.createElement('div');
     fieldWrapper.className = `form-${fd.Type}-wrapper field-wrapper`;
@@ -125,7 +124,7 @@ export async function createForm(formURL) {
     form.append(fieldWrapper);
   });
 
-  form.addEventListener('submit', async event => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (form.checkValidity()) {
       await submitForm(form);
