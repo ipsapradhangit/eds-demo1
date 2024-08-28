@@ -97,8 +97,7 @@ export async function createForm(formURL) {
   const resp = await fetch(formURL);
   const json = await resp.json();
   const form = document.createElement('form');
-  form.dataset[data1, data2] = formURL.split('.json');
-  form.dataset.action = data1;
+  form.dataset.action = formURL.split('.json')[0];
 
   json.data.forEach((fd) => {
     fd.Type = fd.Type || 'text';
