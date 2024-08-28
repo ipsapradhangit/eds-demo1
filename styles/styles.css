@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -10,14 +11,22 @@
  * governing permissions and limitations under the License.
  */
 
-:root {
+ :root {
   /* colors */
-  --background-color: cyan;
+  --background-color: #00FFFF;
   --light-color: #f8f8f8;
   --dark-color: #505050;
-  --text-color: magenta;
+  --text-color: #ff00ff;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+  
+    /*  
+  --background-color: "#0FF";
+  --light-color: #f8f8f8;
+  --dark-color: #505050;
+  --text-color: #"f0f";
+  --link-color: #3b63fb;
+  --link-hover-color: #1d3ecf; */
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -254,4 +263,16 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+/*
+.sectioncolor{
+  background-color: lightgray;
+  height: 200px;
+} */
+
+/*Day 2 Part 1 Assg 1 */
+
+.image-part {
+  background-color: var(--link-color);
+  height: 200px;
 }
