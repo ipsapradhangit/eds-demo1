@@ -2,8 +2,6 @@ import { createOptimizedPicture, fetchPlaceholders } from '../../scripts/aem.js'
 
 export default async function decorate(block) {
   const placeholders = await fetchPlaceholders('');
-  
-  // eslint-disable no-console
   console.log(placeholders); // Debugging: Check the content of placeholders
   const clickHereForMore = placeholders?.clickHereForMore || 'Click Here For More'; // Fallback text
 
